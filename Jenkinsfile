@@ -26,7 +26,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'docker build -f DemoApplication/Dockerfile -t fuze365/DemoApplication:latest'
+        sh 'docker build -f DemoApplication/Dockerfile .'
       }
     }
 
