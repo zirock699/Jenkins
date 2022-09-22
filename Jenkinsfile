@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout Code') {
       steps {
-        git(url: 'https://github.com/zirock699/Jenkins', branch: 'main')
+        git(url: 'https://github.com/zirock699/DemoApplication', branch: 'main')
       }
     }
 
@@ -17,7 +17,7 @@ pipeline {
 
         stage('error') {
           steps {
-            sh 'cd curriculum-front && npm i'
+            sh 'npm i'
           }
         }
 
