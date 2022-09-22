@@ -26,7 +26,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'docker build -f DemoApplication/Dockerfile .'
+        sh 'docker build Dockerfile .'
       }
     }
 
