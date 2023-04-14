@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 4.1.3.0
+Project("") = "Exercise 1", "Exercise 1\Test.tsp", "75A324AA-3324-4C07-9413-DD946E160706"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\demo\myTests\Jenkins\Becoming the greatest UFT experts\Exercise 1\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Project("") = "try", "..\try\Test.tsp", "E273DBE9-8C6B-44B5-8B09-AEF3BE80FB7E"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\demo\myTests\Jenkins\try\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		75A324AA-3324-4C07-9413-DD946E160706.Debug|Any CPU.Build.0 = Debug|Any CPU
+		75A324AA-3324-4C07-9413-DD946E160706.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		75A324AA-3324-4C07-9413-DD946E160706.Release|Any CPU.Build.0 = Release|Any CPU
+		75A324AA-3324-4C07-9413-DD946E160706.Release|Any CPU.ActiveCfg = Release|Any CPU
+		E273DBE9-8C6B-44B5-8B09-AEF3BE80FB7E.Debug|Any CPU.Build.0 = Debug|Any CPU
+		E273DBE9-8C6B-44B5-8B09-AEF3BE80FB7E.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		E273DBE9-8C6B-44B5-8B09-AEF3BE80FB7E.Release|Any CPU.Build.0 = Release|Any CPU
+		E273DBE9-8C6B-44B5-8B09-AEF3BE80FB7E.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+EndGlobal
