@@ -15,7 +15,7 @@ WpfWindow("Micro Focus MyFlight Sample").WpfButton("OK").Click
 VerifyAuthenticationWindows()
 
 
-'functions
+'Many functions can be moved to a function library
 
 Function VerifyAuthenticationWindows()
 If  StrComp(ExpectedResult, "Login not ok", vbTextCompare) = 0 Then
