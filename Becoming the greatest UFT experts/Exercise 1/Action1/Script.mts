@@ -1,14 +1,21 @@
-﻿UserName = DataTable("Username", dtGlobalSheet)
+﻿'Arrange
+UserName = DataTable("Username", dtGlobalSheet)
 Password = DataTable("Password", dtGlobalSheet)
-ExpectedResult = DataTable("Expected", dtGlobalSheet)
-PasswordMaskChar = "●"
- @@ hightlight id_;_2085704240_;_script infofile_;_ZIP::ssf24.xml_;_
+ExpectedResult = DataTable("Expected",  dtGlobalSheet)
+PasswordMaskChar = "●" @@ hightlight id_;_2085704240_;_script infofile_;_ZIP::ssf24.xml_;_
+Environment.Value("LoggedIn") = false
+Environment.Value("EnvUserName") = UserName
+
+'Act	
 WpfWindow("Micro Focus MyFlight Sample").WpfEdit("agentName").Set(UserName)
 WpfWindow("Micro Focus MyFlight Sample").WpfEdit("password").Set(Password)
+'Assert
 VerifyPasswordIsMasked()
 WpfWindow("Micro Focus MyFlight Sample").WpfButton("OK").Click
 VerifyAuthenticationWindows()
 
+
+'functions
 
 Function VerifyAuthenticationWindows()
 If  StrComp(ExpectedResult, "Login not ok", vbTextCompare) = 0 Then
@@ -19,7 +26,14 @@ If  StrComp(ExpectedResult, "Login not ok", vbTextCompare) = 0 Then
  	Reporter.ReportEvent micFail, "Login Failed Dialog Is Not Displayed", "Login Failed Dialog Is Not  Displayed"
 	End  If	
 ElseIf StrComp(ExpectedResult, "Login ok", vbTextCompare) = 0 Then
-	WpfWindow("Micro Focus MyFlight Sample").WpfObject("Hello").Check CheckPoint("Hello")	
+	'WpfWindow("Micro Focus MyFlight Sample").WpfObject("Hello").Check CheckPoint("Hello")	
+	If WpfWindow("Micro Focus MyFlight Sample").WpfObject("Hello").Exist(2) Then
+		Reporter.ReportEvent micPass, "Log in success", "Log in success"
+		Environment.Value("LoggedIn") = true
+	else
+		Reporter.ReportEvent micFail, "Login Failed wlecome screen displayed", "Login Failed wlecome screen displaye"
+	End If
+	 
 End If
 End Function
 

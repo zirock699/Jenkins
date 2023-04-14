@@ -14,6 +14,8 @@ DevelopTool=AQT
 Action0=Action0\Script.mts
 Login=Action1\Script.mts
 Logout=Action3\Script.mts
+Booking=Action5\Script.mts
+UpdateBooking=Action6\Script.mts
 
 [VuserProfiles]
 Profiles=Default Profile
@@ -42,6 +44,7 @@ File Content=
 Insight=
 Windows Applications=
 TEA=
+.NET=
 WPF=
 XML=
 
@@ -59,3 +62,9 @@ Action1\ObjectRepository.bdb=
 Action3\Script.mts=
 Action3\Resource.mtr=
 Action3\ObjectRepository.bdb=
+Action5\Script.mts=
+Action5\Resource.mtr=
+Action5\ObjectRepository.bdb=
+Action6\Script.mts=
+Action6\Resource.mtr=
+Action6\ObjectRepository.bdb=
